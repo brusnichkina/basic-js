@@ -13,9 +13,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function deleteDigit(n) {
   let arr = [];
-  n = n.toString();
-  for (let i = 0; i < n.length; i++) {
-    arr.push((n.slice(0, i) + n.slice(i + 1, n.length)) * 1);
+  let given = n.toString();
+  for (let i = 0; i < given.length; i++) {
+    arr.push((given.slice(0, i) + given.slice(i + 1, given.length)) * 1);
   }
   return Math.max(...arr);
 }
